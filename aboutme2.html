@@ -1,0 +1,43 @@
+ <!DOCTYPE html> <!defines document to be html5>
+<html> 
+<head>
+<title>About me</title> <!page title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<style>
+#map {
+		width: 30%;
+		height: 400px;
+		background-color: grey;
+	}
+</style>
+
+
+
+
+
+<body bgcolor='E1E1E1'>
+
+<h3>That's where I am from:</h3>
+		<div id="map"></div>
+		<script>			
+			function initMap() {
+				var Nowogard = {lat: 53.669952, lng: 15.122536};
+				var map = new google.maps.Map(document.getElementById('map'),{
+					zoom: 5,
+					center: Nowogard
+				});
+				var marker = new google.maps.Marker({
+					position: Nowogard,
+					map: map
+				});
+			}
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY92qfl9lqpKADxe3d9lTFjgiYq5GHtb4&callback=initMap">
+		</script>
+
+
+
+</body>
+</html> 
+
